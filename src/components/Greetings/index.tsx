@@ -8,7 +8,7 @@ var web3 = new Web3('https://bsc-dataseed.binance.org/');
 
 export function Greetings() {
 
-    let {t, i18n} = useTranslation();
+    let {t} = useTranslation();
 
     console.log(web3);
     return (
