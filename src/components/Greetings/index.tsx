@@ -1,21 +1,12 @@
 import { Button } from '../Button'
-import { Container, Image, Text } from './styles'
+import { Container } from './styles'
+import Web3 from "web3";
 
+var web3 = new Web3( 'https://bsc-dataseed.binance.org/');
 export function Greetings() {
-  function handleSayHello() {
-    window.Main.sendMessage('Hello World');
-
-    console.log('Message sent! Check main process log in terminal.')
-  }
-
+  console.log(web3);
   return (
     <Container>
-      <Image
-        src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg"
-        alt="ReactJS logo"
-      />
-      <Text>An Electron boilerplate including TypeScript, React, Jest and ESLint.</Text>
-      <Button onClick={handleSayHello}>Send message to main process</Button>
     </Container>
   )
 }
