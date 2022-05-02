@@ -14,5 +14,10 @@
     "outDir": "./dist",
     "strict": true ,
     "esModuleInterop": true,
-  }
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "disableCSSModules": true
+  },
+  "exclude": ["node_modules"],
+  "include": ["./src/**/*.ts"]
 }

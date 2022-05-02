@@ -1,13 +1,23 @@
-import { Button } from '../Button'
-import { Container } from './styles'
 import Web3 from "web3";
+import {useTranslation} from 'react-i18next'
+import {Layout} from 'antd';
+import {ContentS, HeaderS} from "./styles";
+import {LanguageSelect} from "../LanguageSelect";
 
-var web3 = new Web3( 'https://bsc-dataseed.binance.org/');
+var web3 = new Web3('https://bsc-dataseed.binance.org/');
+
 export function Greetings() {
-  console.log(web3);
-  return (
-    <Container>
-    </Container>
-  )
+
+    let {t, i18n} = useTranslation();
+
+    console.log(web3);
+    return (
+        <Layout>
+            <HeaderS>
+                <LanguageSelect/>
+            </HeaderS>
+            <ContentS>{t('title')}</ContentS>
+        </Layout>
+    )
 }
  

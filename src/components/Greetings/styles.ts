@@ -1,16 +1,15 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
+import {Layout} from "antd";
 
-const rotate = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`
+const { Header, Content } = Layout;
 
-export const Container = styled.div`
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`
+export const HeaderS = styled(Header)`
+  background: white;
+  height: 50px;
+  padding: 0 0 0 0;
+`;
+
+export const ContentS = styled(Content)`
+  height: 100%;
+  width: 100%;
+`;
